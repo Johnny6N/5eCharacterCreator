@@ -1,0 +1,28 @@
+* {
+  border: 1px solid gold;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+#dndLogo {
+  width: 10%;
+  display: flex;
+  border-radius: 20px;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+main>h2 {
+  text-align: center;
+}
+
+.stepsContainer {
+  display: flex;
+  justify-content: flex-end;
+  text-align: center;
+}
