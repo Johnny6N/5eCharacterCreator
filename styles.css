@@ -23,6 +23,34 @@ main>h2 {
 
 .stepsContainer {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   text-align: center;
+}
+
+.currentStep {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  order: 1;
+}
+
+.stepList {
+  display: flex;
+  flex-direction: column;
+  order: 3;
+
+}
+
+.buttonChoices {
+  display: inline-block;
+  flex-direction: row;
+  order: 2;
+}
+
+button {
+  background-color: green;
+  font-size: 20px;
+  border-radius: 10px;
+  margin: 5px 5px;
+  cursor: pointer;
 }
