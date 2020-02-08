@@ -27,21 +27,21 @@ main>h2 {
   text-align: center;
 }
 
-.currentStep {
+.leftStepsPanel {
   display: flex;
   flex-direction: column;
   justify-content: center;
   order: 1;
 }
 
-.stepList {
+.rightStepsPanel {
   display: flex;
   flex-direction: column;
   order: 3;
 
 }
 
-.buttonChoices {
+.centerChoicePanel {
   display: inline-block;
   flex-direction: row;
   order: 2;
