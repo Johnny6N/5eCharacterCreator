@@ -1,5 +1,9 @@
 * {
-  border: 1px solid gold;
+
+}
+
+body {
+  background-color: black;
 }
 
 header {
@@ -7,6 +11,10 @@ header {
   justify-content: center;
   flex-direction: column;
   text-align: center;
+  background-color: black;
+  color: white;
+  border: 1px solid gold;
+  border-radius: 5px;
 }
 
 #dndLogo {
@@ -28,6 +36,9 @@ main>h2 {
   background-image: url("imgs/tavern.jpg");
   background-position: center;
   background-size: cover;
+  color: white;
+  border: 1px solid gold;
+  border-radius: 5px;
 }
 
 .leftStepsPanel {
@@ -35,12 +46,16 @@ main>h2 {
   flex-direction: column;
   justify-content: center;
   order: 1;
+  border: 1px solid gold;
+  border-radius: 5px;
 }
 
 .rightStepsPanel {
   display: flex;
   flex-direction: column;
   order: 3;
+  border: 1px solid gold;
+  border-radius: 5px;
 
 }
 
@@ -48,14 +63,26 @@ main>h2 {
   display: inline-block;
   flex-direction: row;
   order: 2;
+  border: 1px solid gold;
+  border-radius: 5px;
 }
 
-button {
+.choiceDescript {
+  width:auto;
+}
+.mainContainer {
+  background-image: url("imgs/characterSheetBackground.jpg");
+  color: black;
+  font-size: bold;
+}
+button, .button {
   background-color: green;
   font-size: 20px;
   border-radius: 10px;
   margin: 5px 5px;
   cursor: pointer;
+  color: white;
+  padding: 5px;
 }
 
 .genderRaceImage>img {
@@ -65,5 +92,41 @@ background-color: black;
 }
 
 h1, h2, h3 {
+  background-color: black;
+
+}
+
+.mainContainer {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  border: 5px solid black;
+}
+.leftCharacterPanel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  order: 1;
+  width: 20%;
+  color: black;
+}
+
+.name, .weapons, .equipment {
+  border: 1px solid black;
+}
+.centerCharacterPanel {
+  border: 1px solid black;
+  order: 2;
+  width: 20%;
+  margin: 10px;
+}
+
+.rightCharacterPanel {
+  border: 1px solid black;
+  order: 3;
+  width: 20%;
+}
+
+p {
   background-color: black;
 }

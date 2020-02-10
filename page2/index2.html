@@ -3,25 +3,25 @@
 <head>
   <meta charset="utf-8">
   <title>5e Character</title>
-  <link rel="stylesheet" href="styles2.css">
+  <link rel="stylesheet" href="../styles.css">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="app2.js"></script>
 </head>
 <body>
   <header>
     <h1>Welcome, Adventurer!</h1>
-    <img id="dndLogo" src="imgs/DnDlogo.jpg" alt="">
+    <img id="dndLogo" src="../imgs/DnDlogo.jpg" alt="">
     <h2>You adventures await, but first, you must create your character!</h2>
   </header>
   <main>
     <div class="stepsContainer">
       <div class="leftStepsPanel">
-        <h1>Step One:</h1>
-        <h2>What race are you?</h2>
+        <h1 style="background-color:purple;">Step Two:</h1>
+        <h2 style="background-color:purple;">What class are you?</h2>
       </div>
       <div class="rightStepsPanel">
         <h3>Step 1: Race</h3>
-        <h3>Step 2: Class</h3>
+        <h3 style="background-color:red;">Step 2: Class</h3>
         <h3>Step 3: Name</h3>
         <h3>Step 4: Roll!</h3>
         <h3>Step 5: Character Description</h3>
@@ -29,39 +29,63 @@
       </div>
       <div class="centerChoicePanel">
 
-      <form class="raceChoice">
+        <form class="classChoice">
+          <input type="text" name="Enter name here" value="Enter name here">
+        </form>
 
-      </form>
 
-      <div class="gender">
-        <div class="genderChoice">
-          <div class="genderButtons">
-
-          <button type="button" id="male" class="genderButton">Male</button>
-          <button type="button" id="female" class="genderButton">Female</button>
-        </div>
-        <div class="genderRaceImage">
-
-          <img id="maleImg" width="20%">
-          <img id="femaleImg" width="20%">
-        </div>
-
-        </div>
-        <div class="choiceDesript">
-
+          <div class="choiceDesript">
+            <p id="description"></p>
+            <img src="../imgs/classes.png" alt="" style="width:100%">
+          </div>
+        <div class="submit">
+          <a href="../page3/index3.html" id="next" class="button">Next</a>
         </div>
       </div>
-      <div class="submit">
-        <a href="page2/index2.html" class="button">Submit</a>
-      </div>
-    </div>
     </div>
     <div class="mainContainer">
-
-      <div class="main image">
-
+      <div class="leftCharacterPanel">
+        <div class="nameRaceClass">
+          <h4>Character</h4>
+          <h4 id="race"></h4>
+          <h4 id="gender"></h4>
+          <h4 id="class"></h4>
+        </div>
+        <div class="weapons">
+          <h4>Weapons</h4>
+        </div>
+        <div class="equipment">
+          <h4>Equipment</h4>
+        </div>
       </div>
+      <div class="centerCharacterPanel">
+        <img id="characterImg" width="100%">
+      </div>
+      <div class="rightCharacterPanel">
+        <div class="strength">
+          <h4>Strength</h4>
+        </div>
+        <div class="dexterity">
+          <h4>Dexterity</h4>
 
+        </div>
+        <div class="constitution">
+          <h4>Constitution</h4>
+
+        </div>
+        <div class="intelligence">
+          <h4>Intelligence</h4>
+
+        </div>
+        <div class="wisdom">
+          <h4>Wisdom</h4>
+
+        </div>
+        <div class="charisma">
+          <h4>Charisma</h4>
+
+        </div>
+      </div>
     </div>
   </main>
 </body>
