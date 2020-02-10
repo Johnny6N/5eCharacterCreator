@@ -8,24 +8,25 @@ $(() => {
   //   console.log(true);
   // }
 
-  /// Getting class list from API:
+  /// Getting race list from API:
   $.ajax ({
     url:'http://www.dnd5eapi.co/api/races',
 
   }).then ((data) => {
 
-    /// Generating class buttons:
+    /// Generating race buttons:
     for (var i = 0; i < 9; i++) {
-      const $classButton = $(`<button type="submit" id=\"${data.results[i].index}\" class="classButton">${data.results[i].index}</button>`)
-      $('form').append($classButton)
+      const $raceButton = $(`<button type="submit" id=\"${data.results[i].index}\" class="raceButton">${data.results[i].index}</button>`)
+      $('form').append($raceButton)
+      console.log($raceButton);
     }
 
-    /// Attributing character class choice to $userInput, and calling up class images:
-    $('.classButton').on('click', (event) => {
+    /// Attributing character race choice to $userInput, and calling up race images:
+    $('.raceButton').on('click', (event) => {
       event.preventDefault();
       const $userInput = $(event.currentTarget).attr('id');
-      $("#maleImg").attr('src', `imgs/male/${$userInput}.png`)
-      $("#femaleImg").attr('src', `imgs/female/${$userInput}.png`)
+      $("#maleImg").attr('src', `imgs/male/${$userInput}.png`).css('display', 'inline-block')
+      $("#femaleImg").attr('src', `imgs/female/${$userInput}.png`).css('display', 'inline-block')
       console.log($userInput);
     });
 
@@ -37,18 +38,13 @@ $(() => {
 
       /// focusing image on gender choice:
       if ($genderInput === "male") {
-        $("#femaleImg").css('opacity', '0.2')
-        // $("#maleImg").css('transform', 'translate(50px)').css('background-color', 'white')
-        $("#maleImg").css('opacity', '1.2')
+        $("#femaleImg").css('display', 'none')
+        $("#maleImg").css('translate', '100px').css('display', 'inline-block')
       } else if ($genderInput === "female") {
-          $("#maleImg").css('opacity', '0.2')
-          $("#femaleImg").css('opacity', '1.2')
+        $("#maleImg").css('display', 'none')
+        $("#femaleImg").css('translate', '100px').css('display', 'inline-block')
       }
     });
+
   });
-
-
-
-
-
 })

@@ -25,6 +25,9 @@ main>h2 {
   display: flex;
   justify-content: space-between;
   text-align: center;
+  background-image: url("imgs/tavern.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
 .leftStepsPanel {
@@ -53,4 +56,14 @@ button {
   border-radius: 10px;
   margin: 5px 5px;
   cursor: pointer;
+}
+
+.genderRaceImage>img {
+height: 200px;
+width: 125px;
+background-color: black;
+}
+
+h1, h2, h3 {
+  background-color: black;
 }
