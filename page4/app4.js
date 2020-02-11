@@ -5,6 +5,8 @@ const characterRace = sessionStorage.getItem("$userInput");
 const characterGender = sessionStorage.getItem("$genderInput");
 const characterClass = sessionStorage.getItem("$classInput");
 const characterName = sessionStorage.getItem("$nameInput");
+const proficienciesTraitsCarry = sessionStorage.getItem("proficienciesTraits");
+const proficienciesTraits = proficienciesTraitsCarry.split(',')
 //
 
 // initializers for roll variables:
@@ -42,6 +44,10 @@ $(() => {
   $('#race').text(characterRace)
   $('#gender').text(characterGender)
   $('#name').text(characterName)
+  $("#characterImg").attr('src', `../imgs/${characterGender}/${characterRace}.png`)
+  for (var i = 0; i < proficienciesTraits.length; i++) {
+  $('.proficiencies').append(`<h2> ${proficienciesTraits[i]}</h2>`);
+  }
 //
 
 // setting roll function to roll button and calling results:

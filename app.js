@@ -1,7 +1,5 @@
-// const testBarbarian = "This is a variable across js test";
-// sessionStorage.setItem("testBarbarian", testBarbarian);
+proficienciesTraits = [];
 
-// console.log($userInput);
 $(() => {
 
   /// Getting race list from API:
@@ -26,6 +24,33 @@ $(() => {
       const characterRace = $userInput;
       sessionStorage.setItem("$userInput", $userInput);
       $('#race').text($userInput)
+      //
+
+      // Getting proficiencies/traits, and assigning them:
+      $.ajax ({
+        url:`http://www.dnd5eapi.co/api/races/${characterRace}`,
+
+      }).then ((data) => {
+        for (var i = 0; i < data.starting_proficiencies.length; i++) {
+          $('.proficiencies').append(`<h2> ${data.starting_proficiencies[i].name}</h2>`);
+          proficienciesTraits.push(`${data.starting_proficiencies[i].name}`)
+        }
+        for (var i = 0; i < data.traits.length; i++) {
+          $('.proficiencies').append(`<h2>${data.traits[i].name}</h2>`);
+          proficienciesTraits.push(`${data.traits[i].name}`)
+        }
+        const proficienciesTraitsCarry = proficienciesTraits;
+        sessionStorage.setItem("proficienciesTraits", proficienciesTraits);
+        console.log(proficienciesTraitsCarry);
+    })
+    //
+
+    // Clearing proficiencies/traits:
+    $('#clear').on('click', (event) => {
+      event.preventDefault();
+      $('.proficiencies').children('h2').remove()
+      proficienciesTraits = [];
+    })
     });
 
     /// Attributing gender choice to $genderInput:
@@ -43,38 +68,12 @@ $(() => {
       } else if ($genderInput === "female") {
         $("#maleImg").css('display', 'none')
         $("#femaleImg").css('translate', '100px').css('display', 'inline-block')
+
       }
-
-
-// $("#characterImg").attr('src', `imgs/${$genderInput}/${$userInput}.png`)
 
     });
 
   });
-  // $('#next').on('click', (event) => {
-  //   event.preventDefault();
-  //   const characterRace = $userInput;
-  // sessionStorage.setItem("$userInput", $userInput);
-  // $('.submit').on('click', (event) => {
-  //   event.preventDefault();
-  //   $.ajax ({
-  //     url:'http://www.dnd5eapi.co/api/classes',
-  //
-  //   }).then ((data) => {
-  //
-  //     /// Generating race buttons:
-  //     for (var i = 0; i < 9; i++) {
-  //       const $classButton = $(`<button type="submit" id=\"${data.results[i].index}\" class="raceButton">${data.results[i].index}</button>`)
-  //       $('form').append($classButton)
-  //       console.log($classButton);
-  //     }
-  //
-  //     /// Attributing character race choice to $userInput, and calling up race images:
-  //     $('.classButton').on('click', (event) => {
-  //       event.preventDefault();
-  //       const $userInput = $(event.currentTarget).attr('id');
-  //       console.log($userInput);
-  //     });
 
 
 })
