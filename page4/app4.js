@@ -1,7 +1,7 @@
-// const characterRace = sessionStorage.getItem("$userInput");
-// const characterGender = sessionStorage.getItem("$genderInput");
-// const characterClass = sessionStorage.getItem("$classInput");
-// const characterName = sessionStorage.getItem("$nameInput");
+const characterRace = sessionStorage.getItem("$userInput");
+const characterGender = sessionStorage.getItem("$genderInput");
+const characterClass = sessionStorage.getItem("$classInput");
+const characterName = sessionStorage.getItem("$nameInput");
 //
 let abilityScore = []
 let sum = []
@@ -34,6 +34,10 @@ return rollArray;
 }
 
 $(() => {
+  $('#class').text(characterClass)
+  $('#race').text(characterRace)
+  $('#gender').text(characterGender)
+  $('#name').text(characterName)
 
 $('#roll').on('click', (event) => {
   event.preventDefault();
@@ -42,7 +46,7 @@ $('#roll').on('click', (event) => {
   for (var i = 0; i < 6; i++) {
 // console.log(rollArray[i]);
 
-    $(`#rollResults${i}`).text(`Roll ${i}: ${rollArray[i]}`)
+    $(`#rollResults${i}`).text(`Roll ${(i+1)}: ${rollArray[i]}`)
     console.log(`#rollResult${i}`);
   }
 

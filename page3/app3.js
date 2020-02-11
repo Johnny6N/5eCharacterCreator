@@ -9,9 +9,9 @@ $('#class').text(characterClass)
 $('#race').text(characterRace)
 $('#gender').text(characterGender)
 
-$('#nname').on('click', (event) => {
+$('form').on('submit', (event) => {
   event.preventDefault();
-  const $nameInput = $(event.currentTarget).attr('id');
+  const $nameInput = $('#input-box').val()
   const characterName = $nameInput;
   sessionStorage.setItem("$nameInput", $nameInput);
   $('#name').text($nameInput)
