@@ -5,7 +5,7 @@
   <title>5e Character</title>
   <link rel="stylesheet" href="../styles.css">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="app3.js"></script>
+  <script src="app4.js"></script>
 </head>
 <body>
   <header>
@@ -16,33 +16,36 @@
   <main>
     <div class="stepsContainer">
       <div class="leftStepsPanel">
-        <h1 style="background-color:purple;">Step Three:</h1>
-        <h2 style="background-color:purple;">What is your name?</h2>
+        <h1 style="background-color:purple;">Step Four:</h1>
+        <h2 style="background-color:purple;">Roll!</h2>
       </div>
       <div class="rightStepsPanel">
         <h3>Step 1: Race</h3>
         <h3>Step 2: Class</h3>
-        <h3 style="background-color:red;">Step 3: Name</h3>
-        <h3>Step 4: Roll!</h3>
+        <h3>Step 3: Name</h3>
+        <h3 style="background-color:red;">Step 4: Roll!</h3>
         <h3>Step 5: Character Description</h3>
         <h3>Step 6: Equipment</h3>
       </div>
       <div class="centerChoicePanel">
+        <h1 id="rollResults0"></h1>
+        <h1 id="rollResults1"></h1>
+        <h1 id="rollResults2"></h1>
+        <h1 id="rollResults3"></h1>
+        <h1 id="rollResults4"></h1>
+        <h1 id="rollResults5"></h1>
+        <button type="button" id="roll" name="button">Roll!</button>
+<img src="../imgs/dddice.png" alt="" style="width:50%">
 
-        <form class="nameChoice">
-          Name:
-          <input  text">
-          <input type="submit" value="submit">
-
+        <form class="statsChoice">
         </form>
 
 
           <div class="choiceDesript">
             <p id="description"></p>
-            <img src="../imgs/whatisyourname.jpeg" alt="" style="width:100%">
           </div>
         <div class="submit">
-          <a href="../page4/index4.html" class="button">Next</a>
+          <a href="page3/index3.html" class="button">Next</a>
         </div>
       </div>
     </div>
