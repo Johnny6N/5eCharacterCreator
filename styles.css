@@ -58,13 +58,36 @@ main>h2 {
 }
 
 .centerChoicePanel {
-  display: inline-block;
+  display: flex;
   flex-direction: row;
   order: 2;
+  justify-content: space-around;
 }
 
 .choiceDescript {
   width:auto;
+}
+
+.rolls {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  font-size: 1.5em;
+  justify-content: flex-start;
+  margin: 10px;
+  padding: 10px;
+  background-color: black;
+}
+
+.rolls>p {
+  margin: 2px;
+}
+
+.statsChoice {
+display: flex;
+flex-direction: column;
+width: 20%;
+background-color: black;
 }
 
 .mainContainer {
