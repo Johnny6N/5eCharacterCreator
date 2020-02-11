@@ -147,9 +147,12 @@ h1, h2, h3 {
 }
 
 .rightCharacterPanel {
-  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   order: 3;
   width: 20%;
+  color: white;
 }
 
 p {

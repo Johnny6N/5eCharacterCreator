@@ -62,6 +62,8 @@ $.ajax ({
   for (var i = 0; i < data.ability_bonuses.length; i++) {
     $(`#abilityBonus${(i+1)}`).text(`${characterRace} gets ${data.ability_bonuses[i].name} + ${data.ability_bonuses[i].bonus}`)
   }
+
+
   $('form').on('submit', (event) => {
     event.preventDefault();
     const $strengthInput = $('#strength-input-box').val()
@@ -91,6 +93,19 @@ $.ajax ({
     event.preventDefault();
     const $charismaInput = $('#charisma-input-box').val()
     $('.charisma').append(`<h2>${$charismaInput}`)
+    $(event.currentTarget).trigger('reset')
   })
+  $('#clear').on('click', (event) => {
+    event.preventDefault();
+    $('.strength').children('h2').remove()
+    $('.dexterity').children('h2').remove()
+    $('.constitution').children('h2').remove()
+    $('.intelligence').children('h2').remove()
+    $('.wisdom').children('h2').remove()
+    $('.charisma').children('h2').remove()
+
+
+  })
+
 });
 })
