@@ -6,19 +6,38 @@
   <link rel="stylesheet" href="../styles.css">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="app2.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Acme|Bangers|Handlee&display=swap" rel="stylesheet">
 </head>
+
 <body>
+
   <header>
-    <h1>Welcome, Adventurer!</h1>
-    <img id="dndLogo" src="../imgs/DnDlogo.jpg" alt="">
-    <h2>You adventures await, but first, you must create your character!</h2>
+
+    <div class="leftHeader">
+      <img src="../imgs/leftheaderimage.jpg" style="width:100%">
+    </div>
+
+    <div class="centerHeader">
+      <h1>Welcome, Adventurer!</h1>
+      <img id="dndLogo" src="../imgs/DnDlogo.jpg" alt="">
+      <h2>Adventures, battles, and more await you...</h2>
+      <h2>But you must first create your character!</h2>
+    </div>
+
+    <div class="rightHeader">
+      <img src="../imgs/rightheaderimage.jpg" style="width:100%">
+    </div>
+
   </header>
+
   <main>
     <div class="stepsContainer">
+
       <div class="leftStepsPanel">
-        <h1 style="background-color:purple;">Step Two:</h1>
-        <h2 style="background-color:purple;">What class are you?</h2>
+        <h1>Step Two:</h1>
+        <h2>What class are you?</h2>
       </div>
+
       <div class="rightStepsPanel">
         <h3>Step 1: Race</h3>
         <h3 style="background-color:red;">Step 2: Class</h3>
@@ -27,68 +46,71 @@
         <h3>Step 5: Character Description</h3>
         <h3>Step 6: Equipment</h3>
       </div>
+
       <div class="centerChoicePanel">
+        <div class="class">
+          <form class="classChoice"></form>
+        </div>
 
-        <form class="classChoice">
+        <div class="choiceDesript">
+          <img class="classDescription" style="width:100%" style="height:10%">
+        </div>
 
-        </form>
-
-
-          <div class="choiceDesript">
-            <img class="classDescription" style="width:100%" style="height:10%">
-          </div>
         <div class="submit">
           <a href="../page3/index3.html" id="next" class="button">Next</a>
         </div>
       </div>
     </div>
-    <div class="mainContainer">
+
+    <div class="playerContainer">
+
       <div class="leftCharacterPanel">
+
         <div class="nameRaceClass">
           <h4>Character</h4>
           <h4 id="race"></h4>
           <h4 id="gender"></h4>
           <h4 id="class"></h4>
         </div>
+
         <div class="proficiencies">
           <h4>Proficiencies</h4>
+          <button id="clear">Clear</button>
         </div>
+
         <div class="equipment">
           <h4>Equipment</h4>
         </div>
+
       </div>
+
       <div class="centerCharacterPanel">
         <div class="playerImg">
           <img id="characterImg" width="100%">
         </div>
         <div class="playerClassDescription">
           <img class="classDescription">
-
         </div>
       </div>
+
       <div class="rightCharacterPanel">
         <div class="strength">
           <h4>Strength</h4>
         </div>
         <div class="dexterity">
           <h4>Dexterity</h4>
-
         </div>
         <div class="constitution">
           <h4>Constitution</h4>
-
         </div>
         <div class="intelligence">
           <h4>Intelligence</h4>
-
         </div>
         <div class="wisdom">
           <h4>Wisdom</h4>
-
         </div>
         <div class="charisma">
           <h4>Charisma</h4>
-
         </div>
       </div>
     </div>

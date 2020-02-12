@@ -1,20 +1,54 @@
-* {
+font-family: 'Handlee', cursive;
+font-family: 'Bangers', cursive;
+font-family: 'Acme', sans-serif;
 
-}
-
+/* Whole body: */
 body {
   background-color: black;
+  text-align: center;
 }
 
+/* Global buttons: */
+button, .button {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e9ede8), to(#ce401c),color-stop(0.4, #8c1b0b));
+/* Background image from https://24ways.org/2008/shiny-happy-buttons/ */
+  font-size: 20px;
+  border-radius: 10px;
+  margin: 5px 5px;
+  cursor: pointer;
+  color: white;
+  padding: 5px;
+}
+
+/* Three header flex containers: */
 header {
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
   text-align: center;
   background-color: black;
   color: white;
   border: 1px solid gold;
   border-radius: 5px;
+  font-family: 'Bangers', cursive;
+  letter-spacing: .2em;
+}
+
+header>h2 {
+  line-height: 1px;
+  font-family: 'Handlee', cursive;
+}
+
+.leftHeader {
+  display: flex;
+  width: 20%;
+  justify-content: center;
+}
+
+.rightHeader {
+  display: flex;
+  width: 20%;
+  justify-content: center;
 }
 
 #dndLogo {
@@ -25,10 +59,7 @@ header {
   margin: 0 auto;
 }
 
-main>h2 {
-  text-align: center;
-}
-
+/* Three flex-boxes for the "steps" container: */
 .stepsContainer {
   display: flex;
   justify-content: space-between;
@@ -39,22 +70,30 @@ main>h2 {
   color: white;
 }
 
+.stepsContainer>h1, .stepsContainer>h2, .stepsContainer>h3 {
+  background-color: black;
+  text-shadow: 3px 3px 5px #808080;
+}
+
 .leftStepsPanel {
   display: flex;
+  width: 20%;
   flex-direction: column;
   justify-content: center;
   order: 1;
   border: 1px solid gold;
   border-radius: 5px;
+  background-image: url("imgs/stepbackground.jpg");
 }
 
 .rightStepsPanel {
   display: flex;
+  width: 20%;
   flex-direction: column;
   order: 3;
   border: 1px solid gold;
   border-radius: 5px;
-
+  background-image: url("imgs/stepbackground.jpg");
 }
 
 .centerChoicePanel {
@@ -64,32 +103,51 @@ main>h2 {
   justify-content: space-around;
 }
 
-#characterImg {
-  width: 50%;
+/* Images for race on step 1: */
+.genderRaceImage>img {
+height: 200px;
+width: 125px;
+background-color: black;
 }
+
+/* Jpeg of description for class on step 2: */
 .classDescription {
   display: block;
   width: 100%;
   overflow: auto;
 }
 
-.choiceDescript {
+/* .choiceDescript {
   width:auto;
+} */
+
+/* Input box for name, step 3: */
+#input-box {
+  height: 30px;
 }
 
-.rolls {
+/* style for stats rolls, step 4: */
+.centerRollsPanel {
   display: flex;
-  flex-direction: column;
-  width: 20%;
+  flex-direction: row;
+  width: 100%;
   font-size: 1.5em;
   justify-content: flex-start;
   margin: 10px;
   padding: 10px;
-  background-color: black;
+  order: 2;
 }
 
-.rolls>p {
+.rolls {
   margin: 2px;
+  background-color: black;
+  padding: 2px;
+}
+
+.dice>h2 {
+  margin: 2px;
+  background-color: black;
+  padding: 2px;
 }
 
 .statsChoice {
@@ -99,43 +157,17 @@ width: 20%;
 background-color: black;
 }
 
-.mainContainer {
+/* Bottom panel of character sheet: */
+.playerContainer {
   background-image: url("imgs/characterSheetBackground.jpg");
   color: black;
   font-size: bold;
-}
-
-#input-box {
-  height: 30px;
-}
-
-button, .button {
-  background-color: green;
-  font-size: 20px;
-  border-radius: 10px;
-  margin: 5px 5px;
-  cursor: pointer;
-  color: white;
-  padding: 5px;
-}
-
-.genderRaceImage>img {
-height: 200px;
-width: 125px;
-background-color: black;
-}
-
-.stepsContainer>h1, .stepsContainer>h2, .stepsContainer>h3 {
-  background-color: black;
-
-}
-
-.mainContainer {
   display: flex;
   justify-content: space-between;
   text-align: center;
   border: 5px solid black;
 }
+
 .leftCharacterPanel {
   display: flex;
   flex-direction: column;
@@ -143,16 +175,21 @@ background-color: black;
   order: 1;
   width: 20%;
   color: black;
-}
-
-.name, .weapons, .equipment {
+  font-family: 'Acme', sans-serif;
+  font-size: 1.4em;
   border: 1px solid black;
 }
+
+/* character image and class description jpeg: */
 .centerCharacterPanel {
   border: 1px solid black;
   order: 2;
   /* width: 40%; */
   margin: 10px;
+}
+
+#characterImg {
+  width: 50%;
 }
 
 .rightCharacterPanel {
@@ -161,9 +198,8 @@ background-color: black;
   justify-content: space-around;
   order: 3;
   width: 20%;
-  color: white;
-}
-
-p {
-  background-color: black;
+  color: black;
+  font-family: 'Acme', sans-serif;
+  font-size: 1.4em;
+  border: 1px solid black;
 }

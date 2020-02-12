@@ -6,132 +6,148 @@
   <link rel="stylesheet" href="../styles.css">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="app4.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Acme|Bangers|Handlee&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <header>
+
+<header>
+
+  <div class="leftHeader">
+    <img src="../imgs/leftheaderimage.jpg" style="width:100%">
+  </div>
+
+  <div class="centerHeader">
     <h1>Welcome, Adventurer!</h1>
     <img id="dndLogo" src="../imgs/DnDlogo.jpg" alt="">
-    <h2>You adventures await, but first, you must create your character!</h2>
-  </header>
-  <main>
-    <div class="stepsContainer">
-      <div class="leftStepsPanel">
-        <h1 style="background-color:purple;">Step Four:</h1>
-        <h2 style="background-color:purple;">Roll!</h2>
-      </div>
-      <div class="rightStepsPanel">
-        <h3>Step 1: Race</h3>
-        <h3>Step 2: Class</h3>
-        <h3>Step 3: Name</h3>
-        <h3 style="background-color:red;">Step 4: Roll!</h3>
-        <h3>Step 5: Character Description</h3>
-        <h3>Step 6: Equipment</h3>
-      </div>
-      <div class="centerChoicePanel">
-        <div class="rolls">
-          <h1>Your rolls:</h1>
+    <h2>Adventures, battles, and more await you...</h2>
+    <h2>But you must first create your character!</h2>
+  </div>
 
-        <p id="rollResults0"></p>
-        <p id="rollResults1"></p>
-        <p id="rollResults2"></p>
-        <p id="rollResults3"></p>
-        <p id="rollResults4"></p>
-        <p id="rollResults5"></p>
+  <div class="rightHeader">
+    <img src="../imgs/rightheaderimage.jpg" style="width:100%">
+  </div>
+
+</header>
+
+<main>
+  <div class="stepsContainer">
+
+    <div class="leftStepsPanel">
+      <h1>Step Two:</h1>
+      <h2>What class are you?</h2>
+    </div>
+
+    <div class="rightStepsPanel">
+      <h3>Step 1: Race</h3>
+      <h3>Step 2: Class</h3>
+      <h3>Step 3: Name</h3>
+      <h3 style="background-color:red;">Step 4: Roll!</h3>
+      <h3>Step 5: Character Description</h3>
+      <h3>Step 6: Equipment</h3>
+    </div>
+
+    <div class="centerRollsPanel">
+      <div class="rolls">
+        <h1>Your rolls:</h1>
+          <p id="rollResults0"></p>
+          <p id="rollResults1"></p>
+          <p id="rollResults2"></p>
+          <p id="rollResults3"></p>
+          <p id="rollResults4"></p>
+          <p id="rollResults5"></p>
         <button type="button" id="roll" name="button">Roll!</button>
       </div>
 
-<div class="dice">
+      <div class="dice">
+        <img src="../imgs/dddice.png" alt="" style="width:80%">
+        <h2 id="abilityBonus1"></h2>
+        <h2 id="abilityBonus2"></h2>
+        <h2 id="abilityBonus3"></h2>
+        <div class="submit">
+          <a href="#" class="button">Next</a>
+        </div>
+      </div>
 
-<img src="../imgs/dddice.png" alt="" style="width:80%">
-<h2 id="abilityBonus1"></h2>
-<h2 id="abilityBonus2"></h2>
-<h2 id="abilityBonus3"></h2>
+      <div class="statsChoice">
+      <form>
+        <label for="strength">Strength:</label>
+        <input type="text" name="" value="" id="strength-input-box">
 
-<div class="submit">
-  <a href="page3/index3.html" class="button">Next</a>
-</div>
-</div>
+        <label for="dexterity">Dexterity:</label>
+        <input type="text" name="" value="" id="dexterity-input-box">
 
-<div class="statsChoice">
-  <form>
+        <label for="constitution">Constitution:</label>
+        <input type="text" name="" value="" id="constitution-input-box">
 
-  <label for="strength">Strength:</label>
-  <input type="text" name="" value="" id="strength-input-box">
+        <label for="intelligence">Intelligence:</label>
+        <input type="text" name="" value="" id="intelligence-input-box">
 
-  <label for="dexterity">Dexterity:</label>
-  <input type="text" name="" value="" id="dexterity-input-box">
+        <label for="wisdom">Wisdom:</label>
+        <input type="text" name="" value="" id="wisdom-input-box">
 
-  <label for="constitution">Constitution:</label>
-  <input type="text" name="" value="" id="constitution-input-box">
+        <label for="charisma">Charisma:</label>
+        <input type="text" name="" value="" id="charisma-input-box">
+        <button type="submit" name="button" id="submit">Submit</button>
 
-  <label for="intelligence">Intelligence:</label>
-  <input type="text" name="" value="" id="intelligence-input-box">
-
-  <label for="wisdom">Wisdom:</label>
-  <input type="text" name="" value="" id="wisdom-input-box">
-
-  <label for="charisma">Charisma:</label>
-  <input type="text" name="" value="" id="charisma-input-box">
-  <button type="submit" name="button" id="submit">Submit</button>
-
-  <button id="clear">Clear</button>
-
-</form>
-
-</div>
-
-
-          <!-- <div class="choiceDesript">
-            <p id="description"></p>
-          </div> -->
-
+        <button id="clear">Clear</button>
+      </form>
       </div>
     </div>
-    <div class="mainContainer">
-      <div class="leftCharacterPanel">
-        <div class="nameRaceClass">
-          <h4>Character</h4>
-          <h4 id="name"></h4>
-          <h4 id="race"></h4>
-          <h4 id="gender"></h4>
-          <h4 id="class"></h4>
-        </div>
-        <div class="proficiencies">
-          <h4>Proficiencies</h4>
-        </div>
-        <div class="equipment">
-          <h4>Equipment</h4>
-        </div>
+  </div>
+  <div class="playerContainer">
+
+    <div class="leftCharacterPanel">
+
+      <div class="nameRaceClass">
+        <h4>Character</h4>
+        <h4 id="name"></h4>
+        <h4 id="race"></h4>
+        <h4 id="gender"></h4>
+        <h4 id="class"></h4>
       </div>
-      <div class="centerCharacterPanel">
-        <img id="characterImg" style="width:200px">
+
+      <div class="proficiencies">
+        <h4>Proficiencies</h4>
+        <button id="clear">Clear</button>
       </div>
-      <div class="rightCharacterPanel">
-        <div class="strength">
-          <h4>Strength</h4>
-        </div>
-        <div class="dexterity">
-          <h4>Dexterity</h4>
 
-        </div>
-        <div class="constitution">
-          <h4>Constitution</h4>
+      <div class="equipment">
+        <h4>Equipment</h4>
+      </div>
 
-        </div>
-        <div class="intelligence">
-          <h4>Intelligence</h4>
+    </div>
 
-        </div>
-        <div class="wisdom">
-          <h4>Wisdom</h4>
-
-        </div>
-        <div class="charisma">
-          <h4>Charisma</h4>
-
-        </div>
+    <div class="centerCharacterPanel">
+      <div class="playerImg">
+        <img id="characterImg" width="100%">
+      </div>
+      <div class="playerClassDescription">
+        <img class="classDescription">
       </div>
     </div>
-  </main>
+
+    <div class="rightCharacterPanel">
+      <div class="strength">
+        <h4>Strength</h4>
+      </div>
+      <div class="dexterity">
+        <h4>Dexterity</h4>
+      </div>
+      <div class="constitution">
+        <h4>Constitution</h4>
+      </div>
+      <div class="intelligence">
+        <h4>Intelligence</h4>
+      </div>
+      <div class="wisdom">
+        <h4>Wisdom</h4>
+      </div>
+      <div class="charisma">
+        <h4>Charisma</h4>
+      </div>
+    </div>
+  </div>
+</main>
 </body>
 </html>

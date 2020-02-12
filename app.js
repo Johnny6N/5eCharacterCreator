@@ -14,7 +14,8 @@ $(() => {
       $('form').append($raceButton)
       console.log($raceButton);
     }
-
+    //
+    
     /// Attributing character race choice to $userInput, and calling up race images:
     $('.raceButton').on('click', (event) => {
       event.preventDefault();
@@ -68,12 +69,7 @@ $(() => {
       } else if ($genderInput === "female") {
         $("#maleImg").css('display', 'none')
         $("#femaleImg").css('translate', '100px').css('display', 'inline-block')
-
       }
-
     });
-
   });
-
-
 })
