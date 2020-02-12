@@ -19,6 +19,9 @@ $(() => {
     /// Attributing character race choice to $userInput, and calling up race images:
     $('.raceButton').on('click', (event) => {
       event.preventDefault();
+      $('.nameRaceClass').children('li').remove()
+      $('.proficiencyList').children('li').remove()
+      proficienciesTraits = [];
       const $userInput = $(event.currentTarget).attr('id');
       $("#maleImg").attr('src', `imgs/male/${$userInput}.png`).css('display', 'inline-block')
       $("#femaleImg").attr('src', `imgs/female/${$userInput}.png`).css('display', 'inline-block')
@@ -44,20 +47,14 @@ $(() => {
         const proficienciesTraitsCarry = proficienciesTraits;
         sessionStorage.setItem("proficienciesTraits", proficienciesTraits);
         console.log(proficienciesTraitsCarry);
-    })
+      })
     //
-
-    // Clearing proficiencies/traits:
-    $('#clear').on('click', (event) => {
-      event.preventDefault();
-      $('.proficiencies').children('h2').remove()
-      proficienciesTraits = [];
-    })
     });
 
     /// Attributing gender choice to $genderInput:
     $('.genderButton').on('click', (event) => {
       event.preventDefault();
+      $('.nameRaceClass').children('li').eq(1).remove()
       const $genderInput = $(event.currentTarget).attr('id');
       const characterGender = $genderInput;
       sessionStorage.setItem("$genderInput", $genderInput);

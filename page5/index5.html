@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>5e Character</title>
+  <link rel="stylesheet" href="../styles.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="app5.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Acme|Bangers|Handlee&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+
+  <div class="leftHeader">
+    <img src="../imgs/leftheaderimage.jpg" style="width:100%">
+  </div>
+
+  <div class="centerHeader">
+    <h1>Welcome, Adventurer!</h1>
+    <img id="dndLogo" src="../imgs/DnDlogo.jpg" alt="">
+    <h2>Adventures, battles, and more await you...</h2>
+    <h2>But you must first create your character!</h2>
+  </div>
+
+  <div class="rightHeader">
+    <img src="../imgs/rightheaderimage.jpg" style="width:100%">
+  </div>
+
+</header>
+
+<main>
+  <div class="stepsContainer">
+
+    <div class="leftStepsPanel">
+      <h1>Step Five:</h1>
+      <h2>Time to roll!</h2>
+      <h2>(Don't forget to add any modifiers from race, equipment, etc.)</h2>
+    </div>
+
+    <div class="rightStepsPanel">
+      <h3>Step 1: Race</h3>
+      <h3>Step 2: Class</h3>
+      <h3>Step 3: Name</h3>
+      <h3>Step 4: Description/Equipment</h3>
+      <h3 style="background-color:red;">Step 5: Roll!</h3>
+      <h3>Step 6: Done!</h3>
+    </div>
+
+    <div class="centerRollsPanel">
+      <div class="rolls">
+        <h1>Your rolls:</h1>
+        <p id="rollResults0"></p>
+        <p id="rollResults1"></p>
+        <p id="rollResults2"></p>
+        <p id="rollResults3"></p>
+        <p id="rollResults4"></p>
+        <p id="rollResults5"></p>
+        <p>(Click each result when used)</p>
+        <button type="button" id="roll" name="button">Roll!</button>
+
+        <!-- <ul id="rollResults">
+
+        </ul> -->
+
+      </div>
+
+      <div class="dice">
+        <img src="../imgs/dddice.png" alt="" style="width:50%">
+        <h2 id="abilityBonus1"></h2>
+        <h2 id="abilityBonus2"></h2>
+        <h2 id="abilityBonus3"></h2>
+        <div class="submit">
+          <a id="saveStats" href="../page6/index6.html" class="button">Done!</a>
+          <!-- <a id="saveStats"  class="button">Next</a> -->
+        </div>
+      </div>
+
+      <div class="statsChoice">
+      <form>
+        <label for="strength">Strength:</label>
+        <input type="text" name="" value="" id="strength-input-box">
+
+        <label for="dexterity">Dexterity:</label>
+        <input type="text" name="" value="" id="dexterity-input-box">
+
+        <label for="constitution">Constitution:</label>
+        <input type="text" name="" value="" id="constitution-input-box">
+
+        <label for="intelligence">Intelligence:</label>
+        <input type="text" name="" value="" id="intelligence-input-box">
+
+        <label for="wisdom">Wisdom:</label>
+        <input type="text" name="" value="" id="wisdom-input-box">
+
+        <label for="charisma">Charisma:</label>
+        <input type="text" name="" value="" id="charisma-input-box">
+        <button type="submit" name="button" id="submit">Submit</button>
+
+        <button id="clear">Clear</button>
+      </form>
+      </div>
+    </div>
+  </div>
+  <div class="playerContainer">
+
+    <div class="leftCharacterPanel">
+
+      <div class="character">
+        <h4>Character</h4>
+        <ul class="nameRaceClass">
+
+        </ul>
+      </div>
+
+      <div class="proficiencies">
+        <h4>Proficiencies/Traits</h4>
+        <ul class="proficiencyList">
+
+        </ul>
+      </div>
+
+      <div class="equipment">
+        <h4>Equipment</h4>
+      </div>
+
+    </div>
+
+    <div class="centerCharacterPanel">
+      <div class="panelClassImg">
+        <img id="characterImg" width="100%">
+      </div>
+      <div class="panelClass">
+        <img id="panelClassDescription" width="100%">
+      </div>
+    </div>
+
+    <div class="rightCharacterPanel">
+      <h4>Ability Score / Modifier</h4>
+      <div class="strength">
+        <h4>Strength</h4>
+      </div>
+      <div class="dexterity">
+        <h4>Dexterity</h4>
+      </div>
+      <div class="constitution">
+        <h4>Constitution</h4>
+      </div>
+      <div class="intelligence">
+        <h4>Intelligence</h4>
+      </div>
+      <div class="wisdom">
+        <h4>Wisdom</h4>
+      </div>
+      <div class="charisma">
+        <h4>Charisma</h4>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>

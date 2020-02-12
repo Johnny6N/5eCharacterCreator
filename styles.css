@@ -28,7 +28,7 @@ header {
   text-align: center;
   background-color: black;
   color: white;
-  border: 1px solid gold;
+  border: 5px solid gold;
   border-radius: 5px;
   font-family: 'Bangers', cursive;
   letter-spacing: .2em;
@@ -141,15 +141,40 @@ background-color: black;
 }
 
 .rolls {
+  line-height: 1;
+  font-family: 'Acme', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   margin: 2px;
-  background-color: black;
+  background-color: rgba(0, 0, 0, .5);
   padding: 2px;
+  width: 30%;
 }
 
 .dice>h2 {
   margin: 2px;
   background-color: black;
   padding: 2px;
+}
+
+.centerInputPanel {
+  font-family: 'Bangers', cursive;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  order: 2;
+}
+
+.inputBoxes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.inputBoxes label {
+  background-color: black;
+  font-size: 2em;
 }
 
 .statsChoice {
@@ -186,7 +211,7 @@ background-color: black;
   border: 1px solid black;
 }
 
-ol, li {
+ul, li {
   text-align: left;
 }
 
