@@ -40,14 +40,16 @@ return rollArray;
 
 // loading jQuery and carrying over name/race/gender/class:
 $(() => {
-  $('#class').text(characterClass)
-  $('#race').text(characterRace)
-  $('#gender').text(characterGender)
-  $('#name').text(characterName)
+
+  $('.nameRaceClass').append(`<li> ${characterName}`)
+  $('.nameRaceClass').append(`<li> ${characterClass}`)
+  $('.nameRaceClass').append(`<li> ${characterRace}`)
+  $('.nameRaceClass').append(`<li> ${characterGender}`)
   $("#characterImg").attr('src', `../imgs/${characterGender}/${characterRace}.png`)
   for (var i = 0; i < proficienciesTraits.length; i++) {
-  $('.proficiencies').append(`<h2> ${proficienciesTraits[i]}</h2>`);
+  $('.proficiencyList').append(`<li>${proficienciesTraits[i]}`);
   }
+  $('#panelClassDescription').attr('src', `../imgs/classes/${characterClass}.png`)
 //
 
 // setting roll function to roll button and calling results:
@@ -73,32 +75,38 @@ $.ajax ({
   $('form').on('submit', (event) => {
     event.preventDefault();
     const $strengthInput = $('#strength-input-box').val()
-    $('.strength').append(`<h2>${$strengthInput}`)
+    const strengthMod = Math.floor(($strengthInput - 10) / 2)
+    $('.strength').append(`<h2>${$strengthInput} / ${strengthMod}`)
   })
   $('form').on('submit', (event) => {
     event.preventDefault();
     const $dexterityInput = $('#dexterity-input-box').val()
-    $('.dexterity').append(`<h2>${$dexterityInput}`)
+    const dexterityMod = Math.floor(($dexterityInput - 10) / 2)
+    $('.dexterity').append(`<h2>${$dexterityInput} / ${dexterityMod}`)
   })
   $('form').on('submit', (event) => {
     event.preventDefault();
     const $constitutionInput = $('#constitution-input-box').val()
-    $('.constitution').append(`<h2>${$constitutionInput}`)
+    const constitutionMod = Math.floor(($constitutionInput - 10) / 2)
+    $('.constitution').append(`<h2>${$constitutionInput} / ${constitutionMod}`)
   })
   $('form').on('submit', (event) => {
     event.preventDefault();
     const $intelligenceInput = $('#intelligence-input-box').val()
-    $('.intelligence').append(`<h2>${$intelligenceInput}`)
+    const intelligenceMod = Math.floor(($intelligenceInput - 10) / 2)
+    $('.intelligence').append(`<h2>${$intelligenceInput} / ${intelligenceMod}`)
   })
   $('form').on('submit', (event) => {
     event.preventDefault();
     const $wisdomInput = $('#wisdom-input-box').val()
-    $('.wisdom').append(`<h2>${$wisdomInput}`)
+    const wisdomMod = Math.floor(($wisdomInput - 10) / 2)
+    $('.wisdom').append(`<h2>${$wisdomInput} / ${wisdomMod}`)
   })
   $('form').on('submit', (event) => {
     event.preventDefault();
     const $charismaInput = $('#charisma-input-box').val()
-    $('.charisma').append(`<h2>${$charismaInput}`)
+    const charismaMod = Math.floor(($charismaInput - 10) / 2)
+    $('.charisma').append(`<h2>${$charismaInput} / ${charismaMod}`)
     $(event.currentTarget).trigger('reset')
   })
   $('#clear').on('click', (event) => {

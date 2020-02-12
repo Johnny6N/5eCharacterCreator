@@ -21,11 +21,11 @@ const classDecriptions = [
 // console.log(a);
 
 $(() => {
-  $('#race').text(characterRace)
-  $('#gender').text(characterGender)
+  $('.nameRaceClass').append(`<li> ${characterRace}`)
+  $('.nameRaceClass').append(`<li> ${characterGender}`)
   $("#characterImg").attr('src', `../imgs/${characterGender}/${characterRace}.png`)
   for (var i = 0; i < proficienciesTraits.length; i++) {
-  $('.proficiencies').append(`<h2> ${proficienciesTraits[i]}</h2>`);
+  $('.proficiencyList').append(`<li>${proficienciesTraits[i]}`);
 }
   /// Getting class list from API:
   $.ajax ({
@@ -44,9 +44,10 @@ $(() => {
       const $classInput = $(event.currentTarget).attr('id');
       const characterClass = $classInput;
       sessionStorage.setItem("$classInput", $classInput);
-      $('#class').text($classInput)
+      $('.nameRaceClass').append(`<li> ${$classInput}`)
       console.log($classInput);
       $('.classDescription').attr('src', `../imgs/classes/${characterClass}.png`)
+      $('#panelClassDescription').attr('src', `../imgs/classes/${characterClass}.png`)
       // const found = classArr.indexOf($userInput)
       // console.log(found);
       // $('p').text()

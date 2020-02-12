@@ -5,7 +5,7 @@ font-family: 'Acme', sans-serif;
 /* Whole body: */
 body {
   background-color: black;
-  text-align: center;
+  /* text-align: center; */
 }
 
 /* Global buttons: */
@@ -43,12 +43,14 @@ header>h2 {
   display: flex;
   width: 20%;
   justify-content: center;
+  height: auto;
 }
 
 .rightHeader {
   display: flex;
   width: 20%;
   justify-content: center;
+  height: auto;
 }
 
 #dndLogo {
@@ -168,6 +170,10 @@ background-color: black;
   border: 5px solid black;
 }
 
+.playerContainer h4 {
+  text-decoration: underline;
+}
+
 .leftCharacterPanel {
   display: flex;
   flex-direction: column;
@@ -180,9 +186,13 @@ background-color: black;
   border: 1px solid black;
 }
 
+ol, li {
+  text-align: left;
+}
+
 /* character image and class description jpeg: */
 .centerCharacterPanel {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   order: 2;
   /* width: 40%; */
   margin: 10px;

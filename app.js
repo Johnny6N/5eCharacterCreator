@@ -15,7 +15,7 @@ $(() => {
       console.log($raceButton);
     }
     //
-    
+
     /// Attributing character race choice to $userInput, and calling up race images:
     $('.raceButton').on('click', (event) => {
       event.preventDefault();
@@ -24,7 +24,7 @@ $(() => {
       $("#femaleImg").attr('src', `imgs/female/${$userInput}.png`).css('display', 'inline-block')
       const characterRace = $userInput;
       sessionStorage.setItem("$userInput", $userInput);
-      $('#race').text($userInput)
+      $('.nameRaceClass').append(`<li>${$userInput}`)
       //
 
       // Getting proficiencies/traits, and assigning them:
@@ -33,11 +33,12 @@ $(() => {
 
       }).then ((data) => {
         for (var i = 0; i < data.starting_proficiencies.length; i++) {
-          $('.proficiencies').append(`<h2> ${data.starting_proficiencies[i].name}</h2>`);
+          $('.proficiencyList').append(`<li>${data.starting_proficiencies[i].name}`);
           proficienciesTraits.push(`${data.starting_proficiencies[i].name}`)
         }
         for (var i = 0; i < data.traits.length; i++) {
-          $('.proficiencies').append(`<h2>${data.traits[i].name}</h2>`);
+          $('.proficiencyList').append(`<li>${data.traits[i].name}`);
+          // $('.proficiencies').append(`<h4>${data.traits[i].name}</h4>`);
           proficienciesTraits.push(`${data.traits[i].name}`)
         }
         const proficienciesTraitsCarry = proficienciesTraits;
@@ -61,6 +62,7 @@ $(() => {
       const characterGender = $genderInput;
       sessionStorage.setItem("$genderInput", $genderInput);
       $('#gender').text($genderInput)
+      $('.nameRaceClass').append(`<li> ${$genderInput}`)
 
       /// focusing image on gender choice:
       if ($genderInput === "male") {

@@ -6,21 +6,21 @@ const characterClass = sessionStorage.getItem("$classInput");
 
 $(() => {
 
-
-$('#class').text(characterClass)
-$('#race').text(characterRace)
-$('#gender').text(characterGender)
+$('.nameRaceClass').append(`<li> ${characterClass}`)
+$('.nameRaceClass').append(`<li> ${characterRace}`)
+$('.nameRaceClass').append(`<li> ${characterGender}`)
 $("#characterImg").attr('src', `../imgs/${characterGender}/${characterRace}.png`)
 for (var i = 0; i < proficienciesTraits.length; i++) {
-$('.proficiencies').append(`<h2> ${proficienciesTraits[i]}</h2>`);
+$('.proficiencyList').append(`<li>${proficienciesTraits[i]}`);
 }
+$('#panelClassDescription').attr('src', `../imgs/classes/${characterClass}.png`)
 
 $('form').on('submit', (event) => {
   event.preventDefault();
   const $nameInput = $('#input-box').val()
   const characterName = $nameInput;
   sessionStorage.setItem("$nameInput", $nameInput);
-  $('#name').text($nameInput)
+  $('.nameRaceClass').append(`<li> ${$nameInput}`)
   console.log($nameInput);
 
 })
