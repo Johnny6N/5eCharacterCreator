@@ -186,7 +186,7 @@ background-color: black;
 /* Bottom panel of character sheet: */
 .playerContainer {
   background-image: url("imgs/characterSheetBackground.jpg");
-  color: black;
+  color: black !important;
   font-size: bold;
   display: flex;
   justify-content: space-between;
