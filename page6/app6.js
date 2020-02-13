@@ -41,6 +41,6 @@ $('.charisma').append(`<h2>${characterCharisma} / ${charismaMod}`)
 
 $('#lastPageDialogue1').text(`A world in chaos is in need`)
 $('#lastPageDialogue2').text(`of a ${characterGender} ${characterClass}, ${characterRace}!`)
-$('#lastPageDialogue3').text(`Now go, ${characterName}... Adventures await you!`)
+$('#lastPageDialogue3').text(`Now go, ${characterName}... Adventure awaits you!`)
 
 })
