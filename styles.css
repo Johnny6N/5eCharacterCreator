@@ -204,7 +204,7 @@ background-color: black;
   justify-content: space-around;
   order: 1;
   width: 20%;
-  color: black;
+  /* color: black !important; */
   font-family: 'Acme', sans-serif;
   font-size: 1.4em;
   border: 1px solid black;
@@ -230,7 +230,7 @@ ul, li {
   justify-content: space-around;
   order: 3;
   width: 20%;
-  color: black;
+  /* color: black; */
   font-family: 'Acme', sans-serif;
   font-size: 1.4em;
   border: 1px solid black;
