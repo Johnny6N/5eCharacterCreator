@@ -5,7 +5,6 @@ font-family: 'Acme', sans-serif;
 /* Whole body: */
 body {
   background-color: black;
-  /* text-align: center; */
 }
 
 /* Global buttons: */
@@ -123,10 +122,6 @@ background-color: black;
   overflow: auto;
 }
 
-/* .choiceDescript {
-  width:auto;
-} */
-
 /* Input box for name, step 3: */
 #input-box {
   height: 30px;
@@ -221,9 +216,7 @@ ul, li {
 
 /* character image and class description jpeg: */
 .centerCharacterPanel {
-  /* border: 1px solid black; */
   order: 2;
-  /* width: 40%; */
   margin: 10px;
 }
 
