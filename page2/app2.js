@@ -29,7 +29,7 @@ $(() => {
 }
   /// Getting class list from API:
   $.ajax ({
-    url:'https://www.dnd5eapi.co/api/classes',
+    url: 'https://www.dnd5eapi.co/api/classes',
 
   }).then ((data) => {
 

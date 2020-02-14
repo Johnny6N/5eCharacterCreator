@@ -74,7 +74,7 @@ $('#roll').on('click', (event) => {
 
 // getting API for race bonuses to ability scores:
 $.ajax ({
-  url:`https://www.dnd5eapi.co/api/races/${characterRace}`,
+  url: `https://www.dnd5eapi.co/api/races/${characterRace}`,
 
   }).then ((data) => {
 
