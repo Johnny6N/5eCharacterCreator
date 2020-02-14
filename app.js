@@ -4,7 +4,7 @@ $(() => {
 
   /// Getting race list from API:
   $.ajax ({
-    url:'http://www.dnd5eapi.co/api/races',
+    url:'https://www.dnd5eapi.co/api/races',
 
   }).then ((data) => {
 
@@ -32,7 +32,7 @@ $(() => {
 
       // Getting proficiencies/traits, and assigning them:
       $.ajax ({
-        url:`http://www.dnd5eapi.co/api/races/${characterRace}`,
+        url:`https://www.dnd5eapi.co/api/races/${characterRace}`,
 
       }).then ((data) => {
         for (var i = 0; i < data.starting_proficiencies.length; i++) {
